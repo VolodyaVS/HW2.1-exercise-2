@@ -15,54 +15,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTw-XJ-wHK" userLabel="Red">
-                                <rect key="frame" x="142" y="134" width="130" height="130"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
-                                <variation key="heightClass=compact-widthClass=compact" insetsLayoutMarginsFromSafeArea="YES">
-                                    <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
-                                </variation>
-                            </view>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71p-w9-uGs" userLabel="Yellow">
-                                <rect key="frame" x="142" y="314" width="130" height="130"/>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71p-w9-uGs" userLabel="Yellow">
+                                <rect key="frame" x="142" y="298" width="130" height="130"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <variation key="heightClass=compact-widthClass=compact" insetsLayoutMarginsFromSafeArea="YES"/>
-                            </view>
-                            <view alpha="0.29999999999999999" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSx-fa-BAB" userLabel="Green">
-                                <rect key="frame" x="142" y="494" width="130" height="130"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <variation key="heightClass=compact-widthClass=compact" insetsLayoutMarginsFromSafeArea="YES"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hY-7I-dAd">
-                                <rect key="frame" x="86.666666666666686" y="695" width="241" height="52"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="241" id="Xfq-M6-wJu"/>
+                                    <constraint firstAttribute="width" secondItem="71p-w9-uGs" secondAttribute="height" multiplier="1:1" id="OxN-4y-udN"/>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" insetsLayoutMarginsFromSafeArea="YES"/>
+                            </view>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSx-fa-BAB" userLabel="Green">
+                                <rect key="frame" x="142" y="480" width="130" height="130"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kSx-fa-BAB" secondAttribute="height" multiplier="1:1" id="cJl-KE-79h"/>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" insetsLayoutMarginsFromSafeArea="YES"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hY-7I-dAd">
+                                <rect key="frame" x="95" y="719" width="223" height="52"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <variation key="heightClass=compact-widthClass=compact" insetsLayoutMarginsFromSafeArea="YES"/>
                                 <connections>
-                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqZ-OM-ZPr"/>
+                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mqZ-OM-ZPr"/>
                                 </connections>
                             </button>
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTw-XJ-wHK" userLabel="Red">
+                                <rect key="frame" x="142" y="116" width="130" height="130"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XTw-XJ-wHK" secondAttribute="height" multiplier="1:1" id="cRn-Er-6U7"/>
+                                </constraints>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                <variation key="heightClass=compact-widthClass=compact" insetsLayoutMarginsFromSafeArea="YES">
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="XTw-XJ-wHK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2EN-fm-JKR"/>
-                            <constraint firstItem="9hY-7I-dAd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QTM-Nt-hk3"/>
-                            <constraint firstItem="kSx-fa-BAB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fK8-mv-JIe"/>
-                            <constraint firstItem="71p-w9-uGs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vk0-DP-fB6"/>
+                            <constraint firstItem="XTw-XJ-wHK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="1WW-wZ-J15"/>
+                            <constraint firstItem="XTw-XJ-wHK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="65:448" id="3yJ-lo-3KK"/>
+                            <constraint firstItem="71p-w9-uGs" firstAttribute="top" secondItem="XTw-XJ-wHK" secondAttribute="bottom" constant="52" id="6hC-Sp-KXd"/>
+                            <constraint firstItem="kSx-fa-BAB" firstAttribute="top" secondItem="71p-w9-uGs" secondAttribute="bottom" constant="52" id="Bj5-M8-cOk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9hY-7I-dAd" secondAttribute="bottom" constant="91" id="DGh-zF-tX6"/>
+                            <constraint firstItem="71p-w9-uGs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="65:448" id="JD4-OL-3RT"/>
+                            <constraint firstItem="kSx-fa-BAB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cs8-yR-FU0"/>
+                            <constraint firstItem="71p-w9-uGs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eeK-S7-LzL"/>
+                            <constraint firstItem="9hY-7I-dAd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="emi-Ov-1eg"/>
+                            <constraint firstItem="kSx-fa-BAB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="65:448" id="g5r-8y-kdg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9hY-7I-dAd" secondAttribute="trailing" constant="96" id="k2b-3b-CQN"/>
+                            <constraint firstItem="XTw-XJ-wHK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mj7-HU-Cbo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="buttonOutlet" destination="9hY-7I-dAd" id="vDh-3H-dN6"/>
-                        <outlet property="greenOutlet" destination="kSx-fa-BAB" id="XYI-T4-gTk"/>
-                        <outlet property="redOutlet" destination="XTw-XJ-wHK" id="WGC-Qi-V4n"/>
-                        <outlet property="yellowOutlet" destination="71p-w9-uGs" id="c7l-m8-zfp"/>
+                        <outlet property="greenLight" destination="kSx-fa-BAB" id="XYI-T4-gTk"/>
+                        <outlet property="redLight" destination="XTw-XJ-wHK" id="WGC-Qi-V4n"/>
+                        <outlet property="startButton" destination="9hY-7I-dAd" id="vDh-3H-dN6"/>
+                        <outlet property="yellowLight" destination="71p-w9-uGs" id="c7l-m8-zfp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

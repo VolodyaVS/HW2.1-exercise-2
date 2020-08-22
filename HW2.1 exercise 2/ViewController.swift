@@ -8,41 +8,65 @@
 
 import UIKit
 
+enum CurrentLight {
+    case red, yellow, green
+}
+
 class ViewController: UIViewController {
     
-    @IBOutlet weak var redOutlet: UIView!
-    @IBOutlet weak var yellowOutlet: UIView!
-    @IBOutlet weak var greenOutlet: UIView!
+    // MARK: - IB Outlets
     
-    @IBOutlet weak var buttonOutlet: UIButton!
+    @IBOutlet weak var redLight: UIView!
+    @IBOutlet weak var yellowLight: UIView!
+    @IBOutlet weak var greenLight: UIView!
+    
+    @IBOutlet weak var startButton: UIButton!
+    
+    // MARK: - Private Properties
+    
+    private var currentLight = CurrentLight.red
+    private let lightIsOn: CGFloat = 1
+    private let lightIsOff: CGFloat = 0.3
+    
+    // MARK: - Override Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        redOutlet.layer.cornerRadius = redOutlet.layer.bounds.size.width / 2
-        yellowOutlet.layer.cornerRadius = yellowOutlet.layer.bounds.size.width / 2
-        greenOutlet.layer.cornerRadius = greenOutlet.layer.bounds.size.width / 2
+        startButton.layer.cornerRadius = 10
         
-        buttonOutlet.layer.cornerRadius = 10
+        redLight.alpha = lightIsOff
+        yellowLight.alpha = lightIsOff
+        greenLight.alpha = lightIsOff
     }
     
-    @IBAction func buttonAction(_ sender: Any) {
+    override func viewWillLayoutSubviews() {
+        redLight.layer.cornerRadius = redLight.frame.width / 2
+        yellowLight.layer.cornerRadius = yellowLight.frame.width / 2
+        greenLight.layer.cornerRadius = greenLight.frame.width / 2
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func startAction(_ sender: Any) {
         
-        if redOutlet.alpha != 1,
-            yellowOutlet.alpha != 1,
-            greenOutlet.alpha != 1 {
-            redOutlet.alpha = 1
-        } else if redOutlet.alpha == 1 {
-            redOutlet.alpha = 0.3
-            yellowOutlet.alpha = 1
-        } else if yellowOutlet.alpha == 1 {
-            yellowOutlet.alpha = 0.3
-            greenOutlet.alpha = 1
-        } else {
-            greenOutlet.alpha = 0.3
-            redOutlet.alpha = 1
+        startButton.setTitle("NEXT", for: .normal)
+        
+        switch currentLight {
+        case .red:
+            greenLight.alpha = lightIsOff
+            redLight.alpha = lightIsOn
+            currentLight = .yellow
+        case .yellow:
+            redLight.alpha = lightIsOff
+            yellowLight.alpha = lightIsOn
+            currentLight = .green
+        case .green:
+            greenLight.alpha = lightIsOn
+            yellowLight.alpha = lightIsOff
+            currentLight = .red
         }
-        buttonOutlet.setTitle("NEXT", for: .normal)
+        
     }
     
 }
